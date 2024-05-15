@@ -30,10 +30,11 @@ Foreach ($vm in $vms){
         "Name" = $vm.Name
 		"Location" = $loc
 		"VmSize" = $size
+        "PowerState" = $vm.PowerState
         "OSType" = $vm.OsName
         "OSVersion" = $vm.OsVersion
         "NIC" = $nic
-        "Extensions" = $extensions
+        "Extensions" = [string]$extensions
     }
 	$report.Add($obj)
 }
